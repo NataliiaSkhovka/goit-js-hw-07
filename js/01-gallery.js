@@ -1,5 +1,7 @@
-import { galleryItems } from './gallery-items.js';
+import { galleryItems } from "./gallery-items.js";
 // Change code below this line
+
+//create items of img
 function createGalleryItem(galleryItems) {
   return galleryItems
     .map(({ preview, original, description }) => {
@@ -17,10 +19,12 @@ function createGalleryItem(galleryItems) {
     .join("");
 }
 
-//add items of img
+//add items of img to HTML
 const gallery = document.querySelector(".gallery");
 const items = createGalleryItem(galleryItems);
 gallery.insertAdjacentHTML("beforeend", items);
+
+// console.log(createGalleryItem(galleryItems));
 
 gallery.addEventListener("click", onGalleryClick);
 
